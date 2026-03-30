@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- !!Project Settings!! -->
+  <PropertyGroup>
+    <!-- Template Package Info -->
+    <PackageId>MewUIMvvmTemplate</PackageId>
+    <PackageVersion>0.1.1</PackageVersion>
+    <PackageType>Template</PackageType>
+    <PackageTags>dotnet-new;templates;mewui</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>BSD-3-Clause-Clear</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Sorrow-Scarlet/MewUI-MVVM-Template</PackageProjectUrl>
+    <Authors>Sorrow-Scarlet</Authors>
+    <Description>MewUI MewUIMvvm Template with a counter</Description>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LocalizeTemplates>false</LocalizeTemplates>
+  </PropertyGroup>
+
+  <!-- !!Package References!! -->
+  <ItemGroup>
+    <PackageReference Include="Aprillz.MewUI" Version="0.15.0" />
+    <PackageReference
+      Include="Microsoft.TemplateEngine.Tasks"
+      Version="*"
+      PrivateAssets="all"
+      IsImplicitlyDefined="true"
+    />
+  </ItemGroup>
+  <!-- !!Template!! -->
+  <ItemGroup>
+    <Content Include="content\**\*" Exclude="content\**\bin\**;content\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
