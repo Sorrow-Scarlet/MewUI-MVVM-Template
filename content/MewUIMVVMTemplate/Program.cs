@@ -4,7 +4,7 @@ using MewUIMVVMTemplate.Services;
 using MewUIMVVMTemplate.ViewModels;
 using MewUIMVVMTemplate.Views;
 
-// Here for Hot Reload Reflection
+// Here for hot reload reflection
 #if DEBUG
 [assembly: System.Reflection.Metadata.MetadataUpdateHandler(
     typeof(Aprillz.MewUI.HotReload.MewUiMetadataUpdateHandler)
@@ -35,12 +35,15 @@ class Program
     static void BuildWindow()
     {
         var view = new MainView(new MainVM());
-        var window = new Window().OnBuild(x =>
+        // Use new Window() to create a normal window
+        // NOTE: While using NativeCustomWindow
+        // DO NOT ADD PADDING directly to `x` or the button will glitch
+        var window = new NativeCustomWindow().OnBuild(x =>
         {
             x.Content(view).Resizable(480, 480);
             x.Icon(Icon).Title(Title);
             x.OnLoaded(() => { }).OnClosed(() => { });
-            x.Padding(8).Content(view);
+            x.Content(view);
         });
         Application.Run(window);
     }
