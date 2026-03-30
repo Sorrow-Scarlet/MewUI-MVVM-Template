@@ -6,15 +6,15 @@ namespace MewUIMVVMTemplate.ViewModels;
 public class MainVM
 {
     public Counter Counter { get; set; } = new();
-    public ObservableValue<string> Count { get; set; } = new("0");
+    public ObservableValue<int> Count { get; set; } = new(0);
 
     public void Increment()
     {
-        Count.Value = (++Counter.Count).ToString();
+        Count.Value = ++Counter.Count;
     }
 
     public void Decrement()
     {
-        Count.Value = (--Counter.Count).ToString();
+        Count.Value = --Counter.Count;
     }
 }

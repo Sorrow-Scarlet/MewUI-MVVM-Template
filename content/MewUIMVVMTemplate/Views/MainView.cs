@@ -14,7 +14,7 @@ public class MainView : UserControl
             .Center()
             .Children(
                 new Label().Text("Counter MewUI MVVM").FontSize(32).Center(),
-                new Label().BindText(vm.Count).Center().FontSize(64),
+                new Label().BindText(vm.Count, c => $"{c}").Center().FontSize(64),
                 new StackPanel()
                     .Horizontal()
                     .Padding(8)
