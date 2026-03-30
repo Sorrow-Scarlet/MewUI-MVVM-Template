@@ -4,6 +4,12 @@
 
 A simple MewUI MVVM template, with a basic counter.
 
+## Usage
+
+```bash
+dotnet new install MewUIMvvmTemplate
+```
+
 ## License
 
 SPDX-License-Identifier: BSD-3-Clause-Clear
