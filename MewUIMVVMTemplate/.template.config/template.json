@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Sorrow-Scarlet",
+  "classifications": [
+    "Common",
+    "Desktop",
+    "MewUI",
+    "Windows",
+    "macOS",
+    "Linux"
+  ],
+  "identity": "MewUI.MVVM.Template",
+  "name": "MewUI MVVM Template",
+  "shortName": "mewmvvm",
+  "sourceName": "MewUIMVVMTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

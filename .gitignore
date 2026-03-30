@@ -1,0 +1,17 @@
+# C#
+obj
+bin
+
+# IDE
+/.vs
+/.vscode
+/.idea
+
+# MACOS
+.DS_Store
+
+# Haxe
+.haxelib/
+.haxelsp/recording/
+dump/
+build

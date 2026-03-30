@@ -1,0 +1,48 @@
+# Auto detect text files and perform LF normalization
+*          text=auto
+
+# Sources
+*.cshtml   text diff=html
+*.csx      text diff=csharp
+*.fsx      text diff=fsharp
+
+# Graphics
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.tif      binary
+*.tiff     binary
+*.ico      binary
+*.eps      binary
+*.svg      text
+
+# Scripts
+*.bash     text eol=lf
+*.fish     text eol=lf
+*.ksh      text eol=lf
+*.sh       text eol=lf
+*.zsh      text eol=lf
+
+# These are explicitly windows files and should use crlf
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+*.ps1      text eol=crlf
+
+# Serialization
+*.json     text
+*.toml     text
+*.xml      text
+*.xaml     text
+*.axaml    text
+*.yaml     text
+*.yml      text
+
+# Text files where line endings should be preserved
+*.patch    -text
+
+
+# Exclude files from exporting
+.gitattributes export-ignore
+.gitignore     export-ignore
+.gitkeep       export-ignore

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- !!Project Settings!! -->
+  <PropertyGroup>
+    <PackageId>MewUIMvvmTemplate</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Sorrow-Scarlet</Authors>
+    <PackageLicenseExpression>BSD-3-Clause-Clear</PackageLicenseExpression>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>true</PublishAot>
+    <EnableAotAnalyzer>true</EnableAotAnalyzer>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- NOTE: ApplicationIcon use `Code Project` folder's relative path! -->
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <!-- !!App Resource!! -->
+  <!-- NOTE: EmbeddedResource use `Code Project` folder's relative path! -->
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\app.ico" LogicalName="app.ico" />
+    <!-- NOTE: Content use `output binary` folder's relative path. -->
+    <!-- <Content Include="Assets\app.ico" CopyToOutputDirectory="PreserveNewest" /> -->
+  </ItemGroup>
+
+  <!-- !!Package References!! -->
+  <ItemGroup>
+    <PackageReference Include="Aprillz.MewUI" Version="0.15.0" />
+  </ItemGroup>
+</Project>
