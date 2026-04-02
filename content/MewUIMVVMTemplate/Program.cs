@@ -43,7 +43,6 @@ class Program
             x.Content(view).Resizable(480, 480);
             x.Icon(Icon).Title(Title);
             x.OnLoaded(() => { }).OnClosed(() => { });
-            x.Content(view);
         });
         Application.Run(window);
     }
